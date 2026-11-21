@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router"
-import { useField } from '../hooks/useField'
+import { useField } from '../hooks/index'
 import { useAnecdotes } from '../hooks/useAnecdotes'
 
 const CreateNew = () => {
