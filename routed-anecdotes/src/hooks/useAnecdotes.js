@@ -23,8 +23,9 @@ const useAnecdotes = () => {
     anecdoteService.getAll().then(response => setAnecdotes(response))
   }, [])
 
-  const addAnecdote = (anecdote) => {
-    setAnecdotes(anecdotes.concat({ ...anecdote, id: Math.round(Math.random() * 10000) }))
+  const addAnecdote = async (anecdote) => {
+    const createdAnecdote = await anecdoteService.createNew(anecdote)
+    setAnecdotes([...anecdotes, createdAnecdote])
   }
 
   return { anecdotes, addAnecdote }

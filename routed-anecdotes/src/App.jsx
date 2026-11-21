@@ -21,6 +21,7 @@ const App = () => {
           <Route path="/create" element={<CreateNew addAnecdote={addAnecdote} />} />
           <Route path="/about" element={<About />} />
         </Routes>
+
         <Footer />
       </div>
     </Router>

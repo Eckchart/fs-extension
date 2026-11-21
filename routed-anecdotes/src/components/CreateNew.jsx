@@ -8,13 +8,12 @@ const CreateNew = ({ addAnecdote }) => {
 
   const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    addAnecdote({
-      content: content.value,
-      author: author.value,
-      info: info.value,
+    await addAnecdote({
+      content: content.inputFields.value,
+      author: author.inputFields.value,
+      info: info.inputFields.value,
       votes: 0
     })
     navigate("/")
