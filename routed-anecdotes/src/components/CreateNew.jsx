@@ -10,6 +10,7 @@ const CreateNew = ({ addAnecdote }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    
     addAnecdote({
       content: content.value,
       author: author.value,
